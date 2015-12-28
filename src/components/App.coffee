@@ -5,6 +5,9 @@ el = React.createElement
 Root = require './Root'
 Reducers = require '../reducers/root'
 
+# DOM
+{div, ul, form, input, button} = React.DOM
+
 makeStore = () ->
   if __DEV__
     { devTools, persistState } = require 'redux-devtools'
@@ -25,11 +28,11 @@ makeDev = (store) ->
 
 module.exports = MountApp = (mountPoint) ->
   store = makeStore()
-  view = <div>
-      <Provider store={store}>
-        {() -> <Root />}
-      </Provider>
-      {makeDev store}
-    </div>
+  view = 
+    div null,
+      React.createElement Provider, store: store,
+        -> (React.createElement Root)
+        
+
   mounted = React.render view, mountPoint
   return {store, mounted}
