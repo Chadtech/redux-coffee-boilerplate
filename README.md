@@ -33,7 +33,7 @@ redux-devtools will render dispatched actions as a list that you can step throug
 ## uses
 
 * React
-* CoffeeScript ~~ + jsx = cjsx~~
+* CoffeeScript ~~+ jsx = cjsx~~
 * [Redux](http://rackt.github.io/redux/) + [redux-devtools](https://github.com/gaearon/redux-devtools)
 * webpack + [react-hot-loader](http://gaearon.github.io/react-hot-loader/)
 * Immutable.js
