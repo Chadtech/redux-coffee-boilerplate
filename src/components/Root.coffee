@@ -1,8 +1,8 @@
-React = require 'react/addons'
-{ connect } = require 'react-redux'
-Item = require './Item'
-Item = React.createFactory Item
-{addItem, setDone} = require '../actions/ItemActions'
+React               = require 'react/addons'
+{ connect }         = require 'react-redux'
+Item                = require './Item'
+Item                = React.createFactory Item
+{addItem, setDone}  = require '../actions/ItemActions'
 
 # DOM
 {div, ul, form, input, button} = React.DOM
