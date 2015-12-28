@@ -1,9 +1,9 @@
-{ createStore, compose } = require 'redux'
-React = require 'react/addons'
-el = React.createElement
-{ Provider } = require 'react-redux'
-Root = require './Root'
-Reducers = require '../reducers/root'
+{ createStore, compose }  = require 'redux'
+React                     = require 'react/addons'
+el                        = React.createElement
+{ Provider }              = require 'react-redux'
+Root                      = require './Root'
+Reducers                  = require '../reducers/root'
 
 # DOM
 {div, ul, form, input, button} = React.DOM
@@ -30,9 +30,9 @@ module.exports = MountApp = (mountPoint) ->
   store = makeStore()
   view = 
     div null,
-      React.createElement Provider, store: store,
-        -> (React.createElement Root)
+      el Provider, store: store,
+        -> el Root
         
 
   mounted = React.render view, mountPoint
-  return {store, mounted}
+  {store, mounted}
