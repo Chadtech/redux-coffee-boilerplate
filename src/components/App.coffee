@@ -16,9 +16,9 @@ makeStore = () ->
       persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/)),
       createStore
     )
-    return composedStore Reducers
+    composedStore Reducers
   else
-    return createStore Reducers
+    createStore Reducers
 
 makeDev = (store) ->
   if __DEV__
