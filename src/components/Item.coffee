@@ -1,7 +1,7 @@
 React = require 'react/addons'
 
 # DOM
-{li} = React.DOM
+{ li } = React.DOM
 
 module.exports = Item = React.createClass
   render: ->
